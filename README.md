@@ -6,5 +6,5 @@ Pure JavaScript file upload and access without html form and input .
 2. Create a new FormData object.
 3. Access and Append the user selected file to formdata object.  
 4. Make a AJAX request and send the formData object to your back-end.  
- 
- <a href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API" target="_blank"> Learn more about File System Access API on MDN </a>
+
+[Learn more about File System Access API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API){:target="_blank"}
