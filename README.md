@@ -7,7 +7,7 @@ This respository is about how to open file picker and take user input ( files ) 
 3. Then, we store the user input in a variable and append it to a formdata object.
 4. Finally, we use Fetch API to make post request with formdata as body and upload the file to our backend.
 
-## Note
+## Limitations
 File System Access API only works in secure context, which means it will not going to work in HTTP websites.
 
 ## Use cases
