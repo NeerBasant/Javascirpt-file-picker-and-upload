@@ -18,7 +18,7 @@ if(isset($_FILES['image'])){
             $time_and_random = mt_rand(1, 500000000000000).time();
             $new_img_name = $time_and_random.$img_name;
 
-            if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
+            if(move_uploaded_file($tmp_name,$new_img_name)){
                 echo 200;
             }else{
                 echo "Sorry , but we Can't upload Image due to an internal server error";
