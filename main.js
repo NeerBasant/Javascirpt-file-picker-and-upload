@@ -6,7 +6,7 @@ btn.addEventListener("click", async (e) => {
       {
         description: "Images",
         accept: {
-          "image/*": [".png", ".gif", ".jpeg", ".jpg"],
+          "image/*": [".png", ".jpeg", ".jpg"],
         },
       },
     ],
@@ -19,6 +19,13 @@ btn.addEventListener("click", async (e) => {
 
   let form_data = new FormData();
   form_data.append("image", fileData);
+
+  // for the preview
+  let preview = document.getElementById("preview");
+  preview.src = URL.createObjectURL(fileData);
+  preview.onload = function () {
+    URL.revokeObjectURL(preview.src); // free memory
+  };
 
   fetch("upload.php", {
     method: "POST",
