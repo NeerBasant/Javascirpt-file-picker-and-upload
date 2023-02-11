@@ -8,7 +8,7 @@ This respository is about how to open file picker and take user input ( files ) 
 4. Finally, we use Fetch API to make post request with formdata as body and upload the file to our backend.
 
 ## Limitations
-File System Access API only works in secure context, which means it will not going to work in HTTP websites.
+File System Access API only works in secure context, which means it is HTTPS only.
 
 ## Use cases
 In real world we come to many such situations where we want to take user input in files but wheather the user input should be taken or not depends on certain event or some request's response. For example, we have a profile picture and when user clicks on it file picker should open but when only when the user has changed his profile picture in last 7 days. this is a hypothetical situation but you can relate with this.
