@@ -6,14 +6,11 @@ if(isset($_FILES['image'])){
     $img_type = $_FILES['image']['type'];
     $tmp_name = $_FILES['image']['tmp_name'];
     $img_explode = explode('.',$img_name);
-
+    $types = ["image/jpeg", "image/jpg", "image/png"];
     $img_ext = end($img_explode);
     $extensions = ["jpeg", "png", "jpg"];
 
-    if(in_array($img_ext, $extensions) === true){
-
-        $types = ["image/jpeg", "image/jpg", "image/png"];
-        if(in_array($img_type, $types) === true){
+    if((in_array($img_ext, $extensions) === true) && (in_array($img_type, $types) === true)){
 
             $time_and_random = mt_rand(1, 500000000000000).time();
             $new_img_name = $time_and_random.$img_name;
@@ -23,10 +20,6 @@ if(isset($_FILES['image'])){
             }else{
                 echo "Sorry , but we Can't upload Image due to an internal server error";
             }
-
-        }else{
-            echo "Please upload an image file - jpeg, png, jpg";
-        }
 
     }else{
         echo "Please upload an image file - jpeg, png, jpg";
